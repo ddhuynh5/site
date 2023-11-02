@@ -1,11 +1,11 @@
 import React from "react"
 import Nav from "../_components/nav"
-import Home from "../_components/home"
+import Body from "../_components/body"
 
 export async function generateMetadata() {
   return {
     title: "Dennis Huynh",
-    description: "Learn more home Dennis!",
+    description: "Learn more Body Dennis!",
   }
 }
 
@@ -13,7 +13,7 @@ const page = () => {
   return (
     <>
       <Nav />
-      <Home />
+      <Body />
     </>
   )
 }
