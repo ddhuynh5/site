@@ -1,5 +1,8 @@
 import React from "react"
-import { Flex } from "@chakra-ui/react"
+import {
+    Flex,
+    Tag
+} from "@chakra-ui/react"
 
 const techStack = () => {
     return (
@@ -9,57 +12,44 @@ const techStack = () => {
             gap={5}
         >
             <Flex gap={2}>
-                <img
-                    src={"/c.svg"}
-                    alt={"c"}
-                />
-                <img
-                    src={"/cpp.svg"}
-                    alt={"c++"}
-                />
-                <img
-                    src={"/cs.svg"}
-                    alt={"c#"}
-                    style={{ height: "48px", width: "48px" }}
-                />
+                {["/c.svg", "/cpp.svg", "/cs.svg"].map((src) => (
+                    <Tag colorScheme="blue">
+                        <img
+                            src={src}
+                            style={{ height: "48px", width: "48px" }}
+                        />
+                    </Tag>
+                ))}
             </Flex>
             <Flex gap={2}>
-                <img
-                    src={"/python.svg"}
-                    alt={"python"}
-                />
-                <img
-                    src={"/js.svg"}
-                    alt={"javascript"}
-                />
-                <img
-                    src={"/ts.svg"}
-                    alt={"typescript"}
-                />
+                {["/python.svg", "/js.svg", "/ts.svg"].map((src) => (
+                    <Tag colorScheme="blue">
+                        <img
+                            src={src}
+                            style={{ height: "48px", width: "48px" }}
+                        />
+                    </Tag>
+                ))}
             </Flex>
             <Flex gap={2}>
-                <img
-                    src={"/react.svg"}
-                    alt={"react"}
-                />
-                <img
-                    src={"/next.svg"}
-                    alt={"next"}
-                />
-                <img
-                    src={"/chakra.svg"}
-                    alt={"chakra"}
-                />
+                {["/react.svg", "/next.svg", "/chakra.svg"].map((src) => (
+                    <Tag colorScheme="blue">
+                        <img
+                            src={src}
+                            style={{ height: "48px", width: "48px" }}
+                        />
+                    </Tag>
+                ))}
             </Flex>
             <Flex gap={2}>
-                <img
-                    src={"/post.svg"}
-                    alt={"postgresql"}
-                />
-                <img
-                    src={"/docker.svg"}
-                    alt={"docker"}
-                />
+                {["/docker.svg", "/post.svg"].map((src) => (
+                    <Tag colorScheme="blue">
+                        <img
+                            src={src}
+                            style={{ height: "48px", width: "48px" }}
+                        />
+                    </Tag>
+                ))}
             </Flex>
         </Flex>
     )
