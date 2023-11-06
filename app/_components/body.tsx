@@ -60,7 +60,7 @@ const home = () => {
     const renderComponent = (componentName: ComponentType, activeComponent: ComponentType) => {
         const isActive = componentName === activeComponent;
         return (
-            <div
+            <Box
                 className={`component ${isActive ? "fade-in" : "fade-out"}`}
             >
                 {isActive && (
@@ -71,7 +71,7 @@ const home = () => {
                         {componentName === "contact" && <Contact />}
                     </>
                 )}
-            </div>
+            </Box>
         );
     };
 
@@ -105,33 +105,36 @@ const home = () => {
     return (
         <Flex
             p={10}
-            height={"100vh"}
+            maxHeight={"100vh"}
+            maxWidth={"100vw"}
             direction={"column"}
             style={{ overflow: "hidden" }}
-            alignItems="flex-end"
         >
             <Button
                 onClick={toggleColorMode}
-                maxWidth={10}
+                width={10}
+                alignSelf={"flex-end"}
             >
                 <FontAwesomeIcon icon={faLightbulb} />
             </Button>
             <Flex
-                justifyContent={"space-between"}
-                alignItems={"center"}
-                width={"100%"}
-                height={"100%"}
-                p={12}
+                direction={"row"}
+                height={"100vh"}
+                width={"100vw"}
             >
-                <Hero />
-                <IconDivide switchComponent={switchComponent} activeComponent={component} />
                 <Flex
-                    flex={"1.5"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    direction={"column"}
-                    position={"relative"}
-                    ml={"10vw"}
+                    p={12}
+                    flex={1}
+                >
+                    <Hero />
+                    <IconDivide switchComponent={switchComponent} activeComponent={component} />
+                </Flex>
+                <Flex
+                    flex={2}
+                    justifyContent={"center"}
+                    alignContent={"center"}
                 >
                     {renderComponent("home", component)}
                     {renderComponent("about", component)}

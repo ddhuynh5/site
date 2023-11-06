@@ -25,7 +25,7 @@ const hero = () => {
                     fontStyle={"italic"}
                     mt={1}
                 >
-                    Welcome to My Website!
+                    Welcome to my website!
                 </Text>
                 {/* <TechStack /> */}
             </Flex>
