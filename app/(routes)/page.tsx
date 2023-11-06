@@ -12,7 +12,7 @@ export async function generateMetadata() {
 const page = () => {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Body />
     </>
   )

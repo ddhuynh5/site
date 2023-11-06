@@ -3,10 +3,10 @@ import {
     Heading
 } from "@chakra-ui/react"
 
-const home = () => {
+const about = () => {
     return (
-        <Heading>~ HOME COMPONENT HERE ~</Heading>
+        <Heading>~ ABOUT COMPONENT HERE ~</Heading>
     )
 }
 
-export default home
+export default about

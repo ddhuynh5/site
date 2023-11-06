@@ -7,7 +7,6 @@ import {
 const techStack = () => {
     return (
         <Flex
-            mt={10}
             direction={"column"}
             gap={5}
         >

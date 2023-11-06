@@ -27,7 +27,7 @@ const hero = () => {
                 >
                     Welcome to My Website!
                 </Text>
-                <TechStack />
+                {/* <TechStack /> */}
             </Flex>
         </Flex>
     )
