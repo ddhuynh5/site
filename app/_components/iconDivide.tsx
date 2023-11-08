@@ -3,12 +3,13 @@ import {
     Flex,
     Box,
     Divider,
-    useColorModeValue
+    useColorModeValue,
+    IconButton
 } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
     faHouse,
-    faPaperPlane,
+    faShareNodes,
     faCircleInfo,
     faLayerGroup
 } from "@fortawesome/free-solid-svg-icons"
@@ -16,41 +17,85 @@ import { IconDivideProps } from "../_types"
 
 const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponent }) => {
     return (
-        <Flex flexDirection="column" alignItems="center" m={10}>
+        <Flex
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+        >
             <Box
                 m={3}
                 onClick={() => switchComponent("home")}
                 cursor={"pointer"}
-                className={activeComponent === "home" ? "active" : ""}
             >
-                <FontAwesomeIcon icon={faHouse} size="lg" />
+                <IconButton
+                    aria-label="Home"
+                    variant="ghost"
+                    size="lg"
+                    icon={<FontAwesomeIcon icon={faHouse} size="lg" />}
+                    _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                    }}
+                    isRound
+                    className={activeComponent === "home" ? "active" : ""}
+                />
             </Box>
             <Divider orientation="vertical" h={20} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
             <Box
                 m={3}
                 onClick={() => switchComponent("about")}
                 cursor={"pointer"}
-                className={activeComponent === "about" ? "active" : ""}
             >
-                <FontAwesomeIcon icon={faCircleInfo} size="lg" />
+                <IconButton
+                    aria-label="About"
+                    variant="ghost"
+                    size="lg"
+                    icon={<FontAwesomeIcon icon={faCircleInfo} size="lg" />}
+                    _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                    }}
+                    isRound
+                    className={activeComponent === "about" ? "active" : ""}
+                />
             </Box>
             <Divider orientation="vertical" h={20} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
             <Box
                 m={3}
                 onClick={() => switchComponent("tech")}
                 cursor={"pointer"}
-                className={activeComponent === "tech" ? "active" : ""}
             >
-                <FontAwesomeIcon icon={faLayerGroup} size="lg" />
+                <IconButton
+                    aria-label="About"
+                    variant="ghost"
+                    size="lg"
+                    icon={<FontAwesomeIcon icon={faLayerGroup} size="lg" />}
+                    _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                    }}
+                    isRound
+                    className={activeComponent === "tech" ? "active" : ""}
+                />
             </Box>
             <Divider orientation="vertical" h={20} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
             <Box
                 m={3}
                 onClick={() => switchComponent("contact")}
                 cursor={"pointer"}
-                className={activeComponent === "contact" ? "active" : ""}
             >
-                <FontAwesomeIcon icon={faPaperPlane} size="lg" />
+                <IconButton
+                    aria-label="About"
+                    variant="ghost"
+                    size="lg"
+                    icon={<FontAwesomeIcon icon={faShareNodes} size="lg" />}
+                    _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                    }}
+                    isRound
+                    className={activeComponent === "contact" ? "active" : ""}
+                />
             </Box>
         </Flex>
     )

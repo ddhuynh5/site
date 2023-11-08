@@ -1,7 +1,12 @@
 "use client"
 
 import React from "react"
-import { Flex, useColorMode, Button, Box } from "@chakra-ui/react"
+import {
+    Flex,
+    useColorMode,
+    Button,
+    Box
+} from "@chakra-ui/react"
 import Hero from "./hero"
 import IconDivide from "./iconDivide"
 import Home from "./home"
@@ -15,7 +20,7 @@ import { faLightbulb } from "@fortawesome/free-solid-svg-icons"
 import "../_styles/style.css"
 
 const home = () => {
-    const [component, setComponent] = React.useState<ComponentType>("home");
+    const [component, setComponent] = React.useState<ComponentType>("contact");
     const [lastScrollTime, setLastScrollTime] = React.useState(0);
     const scrollThreshold = 1000;
     const { toggleColorMode } = useColorMode();
@@ -129,10 +134,11 @@ const home = () => {
                     flex={1}
                 >
                     <Hero />
-                    <IconDivide switchComponent={switchComponent} activeComponent={component} />
                 </Flex>
+                <IconDivide switchComponent={switchComponent} activeComponent={component} />
                 <Flex
-                    flex={2}
+                    p={12}
+                    flex={1}
                     justifyContent={"center"}
                     alignContent={"center"}
                 >

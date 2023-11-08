@@ -4,31 +4,24 @@ import {
     Text,
     Heading
 } from "@chakra-ui/react"
-import TechStack from "./techStack"
 
 const hero = () => {
     return (
         <Flex
-            flex={"1"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            direction={"column"}
         >
-            <Flex
-                flex={"2"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                direction={"column"}
+            <Heading>Hi, I'm Dennis ✌️</Heading>
+            <Text
+                textColor={"gray.500"}
+                fontWeight={"semibold"}
+                fontSize={"sm"}
+                fontStyle={"italic"}
+                mt={1}
             >
-                <Heading>Hi, I'm Dennis ✌️</Heading>
-                <Text
-                    textColor={"gray.500"}
-                    fontWeight={"semibold"}
-                    fontSize={"sm"}
-                    fontStyle={"italic"}
-                    mt={1}
-                >
-                    Welcome to my website!
-                </Text>
-                {/* <TechStack /> */}
-            </Flex>
+                Welcome to my website!
+            </Text>
         </Flex>
     )
 }
