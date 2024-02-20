@@ -3,7 +3,8 @@ import {
     Flex,
     Text,
     Heading
-} from "@chakra-ui/react"
+} from "@chakra-ui/react";
+import BouncingArrow from "../_components/BouncingArrow";
 
 const hero = () => {
     return (
@@ -11,17 +12,21 @@ const hero = () => {
             justifyContent={"center"}
             alignItems={"center"}
             direction={"column"}
+            width={"31.25rem"}
+            minW={"31.25rem"}
         >
-            <Heading>Hi, I'm Dennis ✌️</Heading>
+            <Heading fontSize={"4xl"}>Hi, I'm Dennis ✌️</Heading>
             <Text
                 textColor={"gray.500"}
                 fontWeight={"semibold"}
                 fontSize={"sm"}
                 fontStyle={"italic"}
                 mt={1}
+                mb={10}
             >
-                Welcome to my website!
+                Welcome to my website, take a look around to learn more about me!
             </Text>
+            <BouncingArrow />
         </Flex>
     )
 }
