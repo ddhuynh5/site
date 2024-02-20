@@ -117,7 +117,7 @@ const home = () => {
         >
             <Button
                 onClick={toggleColorMode}
-                width={10}
+                p={2}
                 alignSelf={"flex-end"}
             >
                 <FontAwesomeIcon icon={faLightbulb} />
@@ -131,7 +131,7 @@ const home = () => {
                     justifyContent={"center"}
                     alignItems={"center"}
                     p={12}
-                    flex={1}
+                    flex={0}
                 >
                     <Hero />
                 </Flex>

@@ -19,14 +19,13 @@ const contact = () => {
         <Box width={"31.25rem"}>
             <Box
                 borderRadius="lg"
-                bg={useColorModeValue("gray.100", "gray.900")}
                 p={8}
                 alignContent={"center"}
                 justifyContent={"center"}
                 id="tech"
             >
-                <Flex direction={"column"} alignItems={"center"}>
-                    {<Heading>Contact Info</Heading>}
+                <Flex direction={"column"}>
+                    {<Heading>Contact</Heading>}
                     <Stack
                         mt={10}
                         /* spacing={{ base: 4, md: 8, lg: 20 }} */

@@ -13,13 +13,12 @@ const techStack = () => {
         <Box width={"31.25rem"}>
             <Box
                 borderRadius="lg"
-                bg={useColorModeValue("gray.100", "gray.900")}
                 p={8}
                 alignContent={"center"}
                 justifyContent={"center"}
                 id="tech"
             >
-                <Flex direction={"column"} alignItems={"center"}>
+                <Flex direction={"column"}>
                     <Heading size={"lg"}>Front End</Heading>
                     <Flex gap={3} mt={5} flexWrap={"wrap"}>
                         <Tag _hover={{ bg: "teal.600" }}>HTML5</Tag>

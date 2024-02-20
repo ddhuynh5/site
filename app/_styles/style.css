@@ -11,12 +11,11 @@
 
 .fade-in {
     opacity: 1;
-    color: red;
+    color: yellow;
 }
 
 .fade-out {
     opacity: 0;
-    color: blue;
 }
 
 .icon {
