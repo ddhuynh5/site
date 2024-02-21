@@ -35,7 +35,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                 <Divider my={5} borderWidth={1} borderColor={"white"} width={50} />
                 <Text mb={5} dangerouslySetInnerHTML={{ __html: content }} />
                 {git && (
-                    <a href={git} target='_blank'>Github</a>
+                    <a href={git} target="_blank">Github</a>
                 )}
             </CardBody>
         </Card>
