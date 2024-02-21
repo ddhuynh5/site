@@ -10,13 +10,13 @@ import IconDivide from "./iconDivide"
 import Home from "./home"
 import Footer from "./footer"
 import About from "./about"
-import Social from "./social"
+import Social from "./project"
 import TechStack from "./techStack"
 import { ComponentType } from "../_types"
 import "../_styles/style.css"
 
 const home = () => {
-    const [component, setComponent] = React.useState<ComponentType>("tech");
+    const [component, setComponent] = React.useState<ComponentType>("home");
     const [lastScrollTime, setLastScrollTime] = React.useState(0);
     const scrollThreshold = 1000;
 
@@ -136,7 +136,7 @@ const home = () => {
                     {renderComponent("social", component)}
                 </Flex>
             </Flex>
-            {/* <Footer /> */}
+            <Footer />
         </Flex >
     )
 }

@@ -1,13 +1,19 @@
-import React from "react"
-import {
-    Text
-} from "@chakra-ui/react"
+import React, { useState, useEffect } from "react"
+import { Text, Flex } from "@chakra-ui/react"
 
 const footer = () => {
+    const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+    useEffect(() => {
+        setCurrentYear(new Date().getFullYear());
+    }, []);
+
     return (
-        <Text fontSize={"smaller"}>
-            @ dennishuynh.app | Made with ❤️ & 💧
-        </Text>
+        <Flex justifyContent={"center"}>
+            <Text fontSize={"xs"}>
+                Made by Dennis Huynh @ {currentYear}
+            </Text>
+        </Flex>
     )
 }
 

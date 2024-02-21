@@ -8,9 +8,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
     faHouse,
-    faShareNodes,
     faCircleInfo,
-    faLayerGroup
+    faLayerGroup,
+    faListCheck
 } from "@fortawesome/free-solid-svg-icons"
 import { IconDivideProps } from "../_types"
 
@@ -87,7 +87,7 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
                     aria-label="Social"
                     variant="ghost"
                     size="lg"
-                    icon={<FontAwesomeIcon icon={faShareNodes} size="lg" />}
+                    icon={<FontAwesomeIcon icon={faListCheck} size="lg" />}
                     _hover={{
                         bg: "blue.500",
                         color: "white",
