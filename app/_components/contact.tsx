@@ -5,7 +5,7 @@ import {
     Heading,
     Stack,
     IconButton,
-    useColorModeValue,
+    Divider
 } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
@@ -26,6 +26,7 @@ const contact = () => {
             >
                 <Flex direction={"column"}>
                     {<Heading>Contact</Heading>}
+                    <Divider mt={5} mb={10} borderWidth={1} borderColor={"white"} />
                     <Stack
                         mt={10}
                         /* spacing={{ base: 4, md: 8, lg: 20 }} */
@@ -36,7 +37,7 @@ const contact = () => {
                             justify="space-around"
                             direction={{ base: "row", md: "row" }}
                         >
-                            <a href="mailto:ddhuynh@clemson.edu">
+                            <a href="mailto:dennishuynh0119@gmail.com">
                                 <IconButton
                                     aria-label="email"
                                     variant="ghost"
@@ -45,7 +46,7 @@ const contact = () => {
                                     boxSize={"4.375rem"}
                                     icon={<FontAwesomeIcon icon={faEnvelope} />}
                                     _hover={{
-                                        color: useColorModeValue("white", "gray.700"),
+                                        color: "gray.700",
                                     }}
                                     isRound
                                 />
@@ -58,7 +59,7 @@ const contact = () => {
                                 boxSize={"4.375rem"}
                                 icon={<FontAwesomeIcon icon={faGithub} />}
                                 _hover={{
-                                    color: useColorModeValue("white", "gray.700"),
+                                    color: "gray.700",
                                 }}
                                 isRound
                                 onClick={() => window.open("https://github.com/ddhuynh5", "_blank")}
@@ -72,7 +73,7 @@ const contact = () => {
                                 boxSize={"4.375rem"}
                                 icon={<FontAwesomeIcon icon={faLinkedin} size="2xl" />}
                                 _hover={{
-                                    color: useColorModeValue("white", "gray.700"),
+                                    color: "gray.700",
                                 }}
                                 isRound
                                 onClick={() => window.open("https://www.linkedin.com/in/ddhuynh123/", "_blank")}

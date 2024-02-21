@@ -4,8 +4,7 @@ import {
     Flex,
     Tag,
     Heading,
-    Divider,
-    useColorModeValue
+    Divider
 } from "@chakra-ui/react"
 
 const techStack = () => {
@@ -30,7 +29,7 @@ const techStack = () => {
                         <Tag _hover={{ bg: "teal.600" }}>jQuery</Tag>
                         <Tag _hover={{ bg: "teal.600" }}>Bootstrap</Tag>
                     </Flex>
-                    <Divider mt={10} mb={10} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
+                    <Divider mt={10} mb={10} borderWidth={1} borderColor={"white"} />
                     <Heading size={"lg"}>Back End</Heading>
                     <Flex gap={3} mt={5} flexWrap={"wrap"}>
                         <Tag _hover={{ bg: "teal.600" }}>Node Js</Tag>
@@ -41,7 +40,7 @@ const techStack = () => {
                         <Tag _hover={{ bg: "teal.600" }}>MySQL</Tag>
                         <Tag _hover={{ bg: "teal.600" }}>PL/SQL</Tag>
                     </Flex>
-                    <Divider mt={10} mb={10} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
+                    <Divider mt={10} mb={10} borderWidth={1} borderColor={"white"} />
                     <Heading size={"lg"}>A bunch more cool stuff!</Heading>
                     <Flex gap={3} mt={5} flexWrap={"wrap"}>
                         <Tag _hover={{ bg: "teal.600" }}>C#</Tag>

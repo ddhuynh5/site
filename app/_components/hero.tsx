@@ -17,10 +17,9 @@ const hero = () => {
         >
             <Heading fontSize={"4xl"}>Hi, I'm Dennis ✌️</Heading>
             <Text
-                textColor={"gray.500"}
+                textColor={"yellow.400"}
                 fontWeight={"semibold"}
                 fontSize={"sm"}
-                fontStyle={"italic"}
                 mt={1}
                 mb={10}
             >

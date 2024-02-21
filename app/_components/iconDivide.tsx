@@ -3,7 +3,6 @@ import {
     Flex,
     Box,
     Divider,
-    useColorModeValue,
     IconButton
 } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -33,14 +32,14 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
                     size="lg"
                     icon={<FontAwesomeIcon icon={faHouse} size="lg" />}
                     _hover={{
-                        bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        bg: "blue.500",
+                        color: "white",
                     }}
                     isRound
                     className={activeComponent === "home" ? "active" : ""}
                 />
             </Box>
-            <Divider orientation="vertical" h={20} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
+            <Divider orientation="vertical" h={20} borderWidth={1} borderColor={"white"} />
             <Box
                 m={3}
                 onClick={() => switchComponent("about")}
@@ -52,14 +51,14 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
                     size="lg"
                     icon={<FontAwesomeIcon icon={faCircleInfo} size="lg" />}
                     _hover={{
-                        bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        bg: "blue.500",
+                        color: "white",
                     }}
                     isRound
                     className={activeComponent === "about" ? "active" : ""}
                 />
             </Box>
-            <Divider orientation="vertical" h={20} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
+            <Divider orientation="vertical" h={20} borderWidth={1} borderColor={"white"} />
             <Box
                 m={3}
                 onClick={() => switchComponent("tech")}
@@ -71,14 +70,14 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
                     size="lg"
                     icon={<FontAwesomeIcon icon={faLayerGroup} size="lg" />}
                     _hover={{
-                        bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        bg: "blue.500",
+                        color: "white",
                     }}
                     isRound
                     className={activeComponent === "tech" ? "active" : ""}
                 />
             </Box>
-            <Divider orientation="vertical" h={20} borderWidth={1} borderColor={useColorModeValue("black", "white")} />
+            <Divider orientation="vertical" h={20} borderWidth={1} borderColor={"white"} />
             <Box
                 m={3}
                 onClick={() => switchComponent("contact")}
@@ -90,8 +89,8 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
                     size="lg"
                     icon={<FontAwesomeIcon icon={faShareNodes} size="lg" />}
                     _hover={{
-                        bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
+                        bg: "blue.500",
+                        color: "white",
                     }}
                     isRound
                     className={activeComponent === "contact" ? "active" : ""}

@@ -2,8 +2,7 @@ import React from "react"
 import {
     Heading,
     Box,
-    Flex,
-    useColorModeValue
+    Flex
 } from "@chakra-ui/react"
 
 const about = () => {

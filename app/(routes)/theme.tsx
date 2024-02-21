@@ -1,7 +1,6 @@
 "use client"
 
-import { extendTheme, type ThemeConfig, ColorModeProvider } from "@chakra-ui/react"
-import { mode } from "@chakra-ui/theme-tools"
+import { extendTheme, type ThemeConfig } from "@chakra-ui/react"
 
 const config: ThemeConfig = {
     initialColorMode: "system",
@@ -9,10 +8,9 @@ const config: ThemeConfig = {
 }
 
 const styles = {
-    global: (props: { colorMode: "light" | "dark" }) => ({
+    global: () => ({
         body: {
-            // color: mode("black", "#F4EBD0")(props),
-            // bg: mode("gray.300", "gray.700")(props),
+            bg: "blue.900"
         },
     }),
 };

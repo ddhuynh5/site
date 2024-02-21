@@ -3,7 +3,6 @@
 import React from "react"
 import {
     Flex,
-    useColorMode,
     Button,
     Box
 } from "@chakra-ui/react"
@@ -23,7 +22,6 @@ const home = () => {
     const [component, setComponent] = React.useState<ComponentType>("contact");
     const [lastScrollTime, setLastScrollTime] = React.useState(0);
     const scrollThreshold = 1000;
-    const { toggleColorMode } = useColorMode();
 
     const scrollUp = () => {
         if (component === "home") {
@@ -115,13 +113,6 @@ const home = () => {
             direction={"column"}
             style={{ overflow: "hidden" }}
         >
-            <Button
-                onClick={toggleColorMode}
-                p={2}
-                alignSelf={"flex-end"}
-            >
-                <FontAwesomeIcon icon={faLightbulb} />
-            </Button>
             <Flex
                 direction={"row"}
                 height={"100vh"}
