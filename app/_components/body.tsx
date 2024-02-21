@@ -20,7 +20,7 @@ const Body = () => {
     const [lastScrollTime, setLastScrollTime] = useState(0);
     const scrollThreshold = 1000;
 
-    const scrollUp = useCallback(() => {
+    const scrollUp = () => {
         if (component === "home") {
             setComponent("project");
         } else if (component === "about") {
@@ -30,9 +30,9 @@ const Body = () => {
         } else if (component === "project") {
             setComponent("tech");
         }
-    }, [component]);
+    };
 
-    const scrollDown = useCallback(() => {
+    const scrollDown = () => {
         if (component === "home") {
             setComponent("about");
         } else if (component === "about") {
@@ -42,7 +42,7 @@ const Body = () => {
         } else if (component === "project") {
             setComponent("home");
         }
-    }, [component]);
+    };
 
     useEffect(() => {
         const handleWheelScroll = (event: WheelEvent) => {
