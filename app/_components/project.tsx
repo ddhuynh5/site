@@ -11,7 +11,7 @@ import Carousel from "./carousel"
 const project = () => {
     const truck = "This project was built with a team of 5 developers. I volunteered as team lead \
                     and helped to facilitate development, product/project management, and communication!";
-    const truckImg = "/truck.jpg";
+    const truckImg = "/truck.JPG";
     const truckGit = "https://github.com/ddhuynh5/TruckTruckGo";
     const truckTags = [
         <Tag key="react" mt={2}>React</Tag>,

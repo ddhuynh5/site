@@ -44,18 +44,26 @@ const Body = () => {
         }
     };
 
-    const handleWheelScroll = (event: WheelEvent) => {
-        const currentTime = Date.now();
+    React.useEffect(() => {
+        const handleWheelScroll = (event: WheelEvent) => {
+            const currentTime = Date.now();
 
-        if (currentTime - lastScrollTime > scrollThreshold) {
-            setLastScrollTime(currentTime);
-            if (event.deltaY < 0) {
-                scrollUp();
-            } else {
-                scrollDown();
+            if (currentTime - lastScrollTime > scrollThreshold) {
+                setLastScrollTime(currentTime);
+                if (event.deltaY < 0) {
+                    scrollUp();
+                } else {
+                    scrollDown();
+                }
             }
-        }
-    };
+        };
+
+        window.addEventListener("wheel", handleWheelScroll);
+
+        return () => {
+            window.removeEventListener("wheel", handleWheelScroll);
+        };
+    }, [component, lastScrollTime, scrollThreshold, scrollUp, scrollDown]);
 
     const renderComponent = (componentName: ComponentType, activeComponent: ComponentType) => {
         const isActive = componentName === activeComponent;
@@ -94,13 +102,6 @@ const Body = () => {
         setComponent(newComponent);
         crossfade();
     };
-
-    React.useEffect(() => {
-        window.addEventListener("wheel", handleWheelScroll);
-        return () => {
-            window.removeEventListener("wheel", handleWheelScroll);
-        };
-    }, [component]);
 
     return (
         <Flex
