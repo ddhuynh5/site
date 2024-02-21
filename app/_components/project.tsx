@@ -14,12 +14,13 @@ const project = () => {
     const truckImg = "/truck.jpg";
     const truckGit = "https://github.com/ddhuynh5/TruckTruckGo";
     const truckTags = [
-        <Tag mt={2}>React</Tag>,
-        <Tag mt={2} ml={2}>Django</Tag>,
-        <Tag mt={2} ml={2}>MySQL</Tag>,
-        <Tag mt={2} ml={2}>AWS RDS</Tag>,
-        <Tag mt={2} ml={2}>AWS EC2</Tag>
+        <Tag key="react" mt={2}>React</Tag>,
+        <Tag key="django" mt={2} ml={2}>Django</Tag>,
+        <Tag key="mysql" mt={2} ml={2}>MySQL</Tag>,
+        <Tag key="aws-rds" mt={2} ml={2}>AWS RDS</Tag>,
+        <Tag key="aws-ec2" mt={2} ml={2}>AWS EC2</Tag>
     ];
+
 
     const car = "I built and trained a neural network model that would allow a \
                 <a href='https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/' target='_blank'> \
@@ -28,11 +29,12 @@ const project = () => {
     const carVideo = "/husky_test.mp4";
     const carGit = "https://github.com/ddhuynh5/HuskyRobot";
     const carTags = [
-        <Tag mt={2}>Python</Tag>,
-        <Tag mt={2} ml={2}>PyTorch</Tag>,
-        <Tag mt={2} ml={2}>Nvidia Isaac Sim</Tag>,
-        <Tag mt={2}>Jupyter Notebook</Tag>,
+        <Tag key="python" mt={2}>Python</Tag>,
+        <Tag key="pytorch" mt={2} ml={2}>PyTorch</Tag>,
+        <Tag key="nvidia-isaac-sim" mt={2} ml={2}>Nvidia Isaac Sim</Tag>,
+        <Tag key="jupyter-notebook" mt={2}>Jupyter Notebook</Tag>,
     ];
+
 
     const slides = [
         <ProjectBox title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video="" />,

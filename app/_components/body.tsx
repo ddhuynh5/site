@@ -15,7 +15,7 @@ import TechStack from "./techStack"
 import { ComponentType } from "../_types"
 import "../_styles/style.css"
 
-const home = () => {
+const Body = () => {
     const [component, setComponent] = React.useState<ComponentType>("home");
     const [lastScrollTime, setLastScrollTime] = React.useState(0);
     const scrollThreshold = 1000;
@@ -141,4 +141,4 @@ const home = () => {
     )
 }
 
-export default home
+export default Body

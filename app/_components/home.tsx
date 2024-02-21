@@ -50,7 +50,7 @@ const home = () => {
                         fontSize={"sm"}
                         mb={8}
                     >
-                        I'm passionate about creative and innovative solutions, exploring new technologies,
+                        I&apos;m passionate about creative and innovative solutions, exploring new technologies,
                         and continuous learning.
                     </Text>
                 </Flex>

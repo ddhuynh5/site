@@ -15,7 +15,7 @@ const hero = () => {
             width={"31.25rem"}
             minW={"31.25rem"}
         >
-            <Heading fontSize={"4xl"}>Hi, I'm Dennis ✌️</Heading>
+            <Heading fontSize={"4xl"}>Hi, I&apos;m Dennis ✌️</Heading>
             <Text
                 textColor={"yellow.400"}
                 fontWeight={"semibold"}
