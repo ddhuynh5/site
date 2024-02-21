@@ -1,18 +1,9 @@
 import React from "react"
 import {
-    Box,
     Flex,
     Heading,
-    Stack,
-    IconButton,
     Divider
 } from "@chakra-ui/react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import {
-    faLinkedin,
-    faGithub
-} from "@fortawesome/free-brands-svg-icons"
 
 const project = () => {
     return (
@@ -27,7 +18,7 @@ const project = () => {
                 width={"31.25rem"}
             >
                 <Flex direction={"column"}>
-                    <Heading>About</Heading>
+                    <Heading>Projects</Heading>
                     <Divider mt={5} mb={10} borderWidth={1} borderColor={"white"} />
                 </Flex>
             </Flex>
