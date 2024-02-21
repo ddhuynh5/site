@@ -5,7 +5,7 @@ import Body from "../_components/body"
 export async function generateMetadata() {
   return {
     title: "Dennis Huynh",
-    description: "Learn more Body Dennis!",
+    description: "Learn more about Dennis!",
   }
 }
 
