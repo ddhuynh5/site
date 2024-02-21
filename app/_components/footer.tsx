@@ -11,7 +11,7 @@ const footer = () => {
     return (
         <Flex justifyContent={"center"}>
             <Text fontSize={"xs"}>
-                Made by Dennis Huynh @ {currentYear}
+                Made by Dennis Huynh @ {currentYear} | with ❤️ & 💧
             </Text>
         </Flex>
     )
