@@ -18,14 +18,13 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
             <CardBody>
                 <Flex justifyContent="center" alignItems="center" mb={5}>
                     {video ? (
-                        // <iframe
-                        //     src="https://player.vimeo.com/video/915154874?h=adac8b3768"
-                        //     width="250"
-                        //     height="300"
-                        //     allow="autoplay; fullscreen"
-                        //     allowFullScreen
-                        // />
-                        <Text>TEST</Text>
+                        <iframe
+                            src="https://player.vimeo.com/video/915154874?h=adac8b3768"
+                            width="250"
+                            height="300"
+                            allow="autoplay; fullscreen"
+                            allowFullScreen
+                        />
                     ) : (
                         <Image
                             alt="img"
