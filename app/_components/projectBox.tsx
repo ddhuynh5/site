@@ -7,16 +7,9 @@ import {
     Text
 } from "@chakra-ui/react"
 import { ProjectBoxProps } from "../_types"
-import Image from "next/image";
+import Image from "next/image"
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video }) => {
-    const openGitLink = () => {
-        if (git) {
-            window.open(git, "_blank");
-        }
-    };
-
-    console.log(git)
 
     return (
         <Card bg={"blue.700"}>
@@ -42,15 +35,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                 <Divider my={5} borderWidth={1} borderColor={"white"} width={50} />
                 <Text mb={5} dangerouslySetInnerHTML={{ __html: content }} />
                 {git && (
-                    <Text
-                        onClick={openGitLink}
-                        _hover={{
-                            cursor: "pointer"
-                        }}
-                        as="u"
-                    >
-                        Github
-                    </Text>
+                    <a href={git} target='_blank'>Github</a>
                 )}
             </CardBody>
         </Card>

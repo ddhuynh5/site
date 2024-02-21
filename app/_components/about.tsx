@@ -4,7 +4,8 @@ import {
     Flex,
     Stack,
     Divider,
-    Text
+    Text,
+    Link
 } from "@chakra-ui/react"
 import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -12,6 +13,7 @@ import {
     faLinkedin,
     faGithub
 } from "@fortawesome/free-brands-svg-icons"
+import NextLink from "next/link"
 
 const about = () => {
     return (
@@ -86,19 +88,21 @@ const about = () => {
                             direction={{ base: "row", md: "row" }}
                             spacing={3}
                         >
-                            <FontAwesomeIcon
-                                icon={faGithub}
-                                onClick={() => window.open("https://github.com/ddhuynh5", "_blank")}
-                                size="lg"
-                                className="icon"
-                            />
+                            <Link as={NextLink} href="https://github.com/ddhuynh5" isExternal>
+                                <FontAwesomeIcon
+                                    icon={faGithub}
+                                    size="lg"
+                                    className="icon"
+                                />
+                            </Link>
 
-                            <FontAwesomeIcon
-                                icon={faLinkedin}
-                                onClick={() => window.open("https://www.linkedin.com/in/ddhuynh123/", "_blank")}
-                                size="lg"
-                                className="icon"
-                            />
+                            <Link as={NextLink} href="https://www.linkedin.com/in/ddhuynh123/" isExternal>
+                                <FontAwesomeIcon
+                                    icon={faLinkedin}
+                                    size="lg"
+                                    className="icon"
+                                />
+                            </Link>
                         </Stack>
                     </Stack>
                 </Flex>
