@@ -66,7 +66,8 @@ const about = () => {
                         fontSize={"sm"}
                         mb={8}
                     >
-                        They say experience is the best teacher, but I'm more of a "learn by debugging" kind of person
+                        They say experience is the best teacher, but I&apos;m more of a &quot;learn by
+                        debugging&quot; kind of person
                     </Text>
                     <Text
                         textColor={"white"}
