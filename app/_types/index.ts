@@ -15,7 +15,7 @@ export type ProjectBoxProps = {
     image: string;
     git: string;
     tag: JSX.Element[];
-    video: string;
+    video: boolean;
 }
 
 export type CarouselProps = {

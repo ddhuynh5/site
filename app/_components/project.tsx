@@ -21,12 +21,10 @@ const project = () => {
         <Tag key="aws-ec2" mt={2} ml={2}>AWS EC2</Tag>
     ];
 
-
     const car = "I built and trained a neural network model that would allow a \
                 <a href='https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/' target='_blank'> \
                 <span style='text-decoration: underline; color: #63B3ED'>Husky Robot</a> to traverse thru \
                 various terrain autonomously";
-    const carVideo = "true";
     const carGit = "https://github.com/ddhuynh5/HuskyRobot";
     const carTags = [
         <Tag key="python" mt={2}>Python</Tag>,
@@ -36,8 +34,8 @@ const project = () => {
     ];
 
     const slides = [
-        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video="" />,
-        <ProjectBox key="car-project" title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={carVideo} />
+        <ProjectBox key="car-project" title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={true} />,
+        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video={false} />
     ];
 
     return (
