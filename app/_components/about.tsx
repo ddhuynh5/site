@@ -30,10 +30,18 @@ const about = () => {
                     <Text
                         textColor={"white"}
                         fontWeight={"semibold"}
+                        fontSize={"md"}
+                        mb={1}
+                    >
+                        Simplicity &gt; Complexity:
+                    </Text>
+                    <Text
+                        textColor={"white"}
+                        fontWeight={"semibold"}
                         fontSize={"sm"}
                         mb={8}
                     >
-                        Simplicity &gt; Complexity
+                        I take pride in writing code that is well-structured, follows best practices, and adheres to coding standards.
                     </Text>
                     <Text
                         textColor={"white"}
