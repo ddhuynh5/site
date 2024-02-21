@@ -6,6 +6,7 @@ import {
     Divider,
     Text
 } from "@chakra-ui/react"
+import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
     faLinkedin,
@@ -102,9 +103,12 @@ const about = () => {
                 </Flex>
             </Flex>
             <Flex ml={100} mt={215}>
-                <img
+                <Image
+                    alt="Clemson University Icon"
                     src="/clemson.png"
                     style={{ height: "150px", width: "150px" }}
+                    width={150}
+                    height={150}
                 />
             </Flex>
         </Flex>

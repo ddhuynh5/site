@@ -5,6 +5,7 @@ import {
     Heading,
     Divider
 } from "@chakra-ui/react"
+import Image from "next/image"
 
 const techStack = () => {
     return (
@@ -55,9 +56,12 @@ const techStack = () => {
                 </Flex>
             </Flex>
             <Flex ml={100} mt={215}>
-                <img
+                <Image
+                    alt="computer"
                     src="/computer.png"
-                    style={{ height: "150px", width: "150px" }}
+                    style={{ height: "150px", width: "150px", borderRadius: "50%" }}
+                    width={150}
+                    height={150}
                 />
             </Flex>
         </Flex>

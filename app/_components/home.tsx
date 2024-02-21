@@ -5,6 +5,7 @@ import {
     Divider,
     Text
 } from "@chakra-ui/react"
+import Image from "next/image"
 
 const home = () => {
     return (
@@ -57,29 +58,41 @@ const home = () => {
             <Flex direction={"column"} mt={100}>
                 <Flex direction={"row"}>
                     <Flex mt={50}>
-                        <img
+                        <Image
+                            alt="family"
                             src="/family.jpg"
                             style={{ height: "150px", width: "150px", borderRadius: "50%" }}
+                            width={150}
+                            height={150}
                         />
                     </Flex>
                     <Flex ml={50} >
-                        <img
+                        <Image
+                            alt="kid"
                             src="/kid.webp"
                             style={{ height: "150px", width: "150px", borderRadius: "50%" }}
+                            width={150}
+                            height={150}
                         />
                     </Flex>
                 </Flex>
                 <Flex direction={"row"}>
                     <Flex mt={10}>
-                        <img
+                        <Image
+                            alt="my cat, spider"
                             src="/spider.jpg"
                             style={{ height: "150px", width: "150px", borderRadius: "50%" }}
+                            width={150}
+                            height={150}
                         />
                     </Flex>
                     <Flex ml={50} mt={15}>
-                        <img
+                        <Image
+                            alt="pirate"
                             src="/pirate.webp"
                             style={{ height: "150px", width: "150px", borderRadius: "50%" }}
+                            width={150}
+                            height={150}
                         />
                     </Flex>
                 </Flex>

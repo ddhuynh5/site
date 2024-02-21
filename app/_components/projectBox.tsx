@@ -7,6 +7,7 @@ import {
     Text
 } from "@chakra-ui/react"
 import { ProjectBoxProps } from "../_types"
+import Image from "next/image";
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video }) => {
     const openGitLink = () => {
@@ -27,9 +28,12 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                             Your browser does not support the video tag.
                         </video>
                     ) : (
-                        <img
+                        <Image
+                            alt="img"
                             src={image}
                             style={{ height: "150px", width: "150px", borderRadius: "50%" }}
+                            width={150}
+                            height={150}
                         />
                     )}
                 </Flex>
