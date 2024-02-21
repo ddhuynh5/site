@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
-import { Text, Flex } from "@chakra-ui/react"
+import React, { useState, useEffect } from "react";
+import { Text, Flex } from "@chakra-ui/react";
 
-const footer = () => {
+const Footer = () => {
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const footer = () => {
                 Made by Dennis Huynh @ {currentYear} | with ❤️ & 💧
             </Text>
         </Flex>
-    )
-}
+    );
+};
 
-export default footer
+export default Footer;

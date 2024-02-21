@@ -35,10 +35,9 @@ const project = () => {
         <Tag key="jupyter-notebook" mt={2}>Jupyter Notebook</Tag>,
     ];
 
-
     const slides = [
-        <ProjectBox title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video="" />,
-        <ProjectBox title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={carVideo} />
+        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video="" />,
+        <ProjectBox key="car-project" title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={carVideo} />
     ];
 
     return (

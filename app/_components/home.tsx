@@ -30,7 +30,7 @@ const home = () => {
                     >
                         Hi, my name is Dennis Huynh {" "}
                         <Text as="span" fontStyle="italic">
-                            ["win"]
+                            [&quot;win&quot;]
                         </Text>
                         .{" "} A recent graduate from Clemson University, I am an aspiring software engineer,
                         eager to leverage my education and skills to contribute to innovative projects and solutions.
