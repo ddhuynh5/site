@@ -10,7 +10,7 @@ import IconDivide from "./iconDivide"
 import Home from "./home"
 import Footer from "./footer"
 import About from "./about"
-import Social from "./project"
+import Project from "./project"
 import TechStack from "./techStack"
 import { ComponentType } from "../_types"
 import "../_styles/style.css"
@@ -22,12 +22,12 @@ const home = () => {
 
     const scrollUp = () => {
         if (component === "home") {
-            setComponent("social");
+            setComponent("project");
         } else if (component === "about") {
             setComponent("home");
         } else if (component === "tech") {
             setComponent("about");
-        } else if (component === "social") {
+        } else if (component === "project") {
             setComponent("tech");
         }
     };
@@ -38,8 +38,8 @@ const home = () => {
         } else if (component === "about") {
             setComponent("tech");
         } else if (component === "tech") {
-            setComponent("social");
-        } else if (component === "social") {
+            setComponent("project");
+        } else if (component === "project") {
             setComponent("home");
         }
     };
@@ -68,7 +68,7 @@ const home = () => {
                         {componentName === "home" && <Home />}
                         {componentName === "about" && <About />}
                         {componentName === "tech" && <TechStack />}
-                        {componentName === "social" && <Social />}
+                        {componentName === "project" && <Project />}
                     </>
                 )}
             </Box>
@@ -133,7 +133,7 @@ const home = () => {
                     {renderComponent("home", component)}
                     {renderComponent("about", component)}
                     {renderComponent("tech", component)}
-                    {renderComponent("social", component)}
+                    {renderComponent("project", component)}
                 </Flex>
             </Flex>
             <Footer />

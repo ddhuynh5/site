@@ -8,3 +8,16 @@ export type IconDivideProps = {
 export type ActiveProps = {
     isActive: boolean;
 };
+
+export type ProjectBoxProps = {
+    title: string;
+    content: string;
+    image: string;
+    git: string;
+    tag: JSX.Element[];
+    video: string;
+}
+
+export type CarouselProps = {
+    slides: JSX.Element[];
+}

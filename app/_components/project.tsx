@@ -2,12 +2,45 @@ import React from "react"
 import {
     Flex,
     Heading,
-    Divider
+    Divider,
+    Tag
 } from "@chakra-ui/react"
+import ProjectBox from "./projectBox"
+import Carousel from "./carousel"
 
 const project = () => {
+    const truck = "This project was built with a team of 5 developers. I volunteered as team lead \
+                    and helped to facilitate development, product/project management, and communication!";
+    const truckImg = "/truck.jpg";
+    const truckGit = "https://github.com/ddhuynh5/TruckTruckGo";
+    const truckTags = [
+        <Tag mt={2}>React</Tag>,
+        <Tag mt={2} ml={2}>Django</Tag>,
+        <Tag mt={2} ml={2}>MySQL</Tag>,
+        <Tag mt={2} ml={2}>AWS RDS</Tag>,
+        <Tag mt={2} ml={2}>AWS EC2</Tag>
+    ];
+
+    const car = "I built and trained a neural network model that would allow a \
+                <a href='https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/' target='_blank'> \
+                <span style='text-decoration: underline; color: #63B3ED'>Husky Robot</a> to traverse thru \
+                various terrain autonomously";
+    const carVideo = "/husky_test.mp4";
+    const carGit = "https://github.com/ddhuynh5/HuskyRobot";
+    const carTags = [
+        <Tag mt={2}>Python</Tag>,
+        <Tag mt={2} ml={2}>PyTorch</Tag>,
+        <Tag mt={2} ml={2}>Nvidia Isaac Sim</Tag>,
+        <Tag mt={2}>Jupyter Notebook</Tag>,
+    ];
+
+    const slides = [
+        <ProjectBox title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video="" />,
+        <ProjectBox title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={carVideo} />
+    ];
+
     return (
-        <Flex height={"100%"}>
+        <Flex>
             <Flex
                 borderRadius="lg"
                 p={8}
@@ -15,18 +48,12 @@ const project = () => {
                 justifyContent={"center"}
                 id="about"
                 direction={"row"}
-                width={"31.25rem"}
             >
                 <Flex direction={"column"}>
                     <Heading>Projects</Heading>
                     <Divider mt={5} mb={10} borderWidth={1} borderColor={"white"} />
+                    <Carousel slides={slides} />
                 </Flex>
-            </Flex>
-            <Flex ml={100} mt={215}>
-                <img
-                    src="/clemson.png"
-                    style={{ height: "150px", width: "150px" }}
-                />
             </Flex>
         </Flex>
     )
