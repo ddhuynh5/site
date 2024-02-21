@@ -8,6 +8,8 @@ import {
 } from "@chakra-ui/react"
 import { ProjectBoxProps } from "../_types"
 import Image from "next/image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video }) => {
 
@@ -16,10 +18,13 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
             <CardBody>
                 <Flex justifyContent="center" alignItems="center" mb={5}>
                     {video ? (
-                        <video width="150" controls muted>
-                            <source src={video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe
+                            src="https://player.vimeo.com/video/915154874?h=adac8b3768"
+                            width="250"
+                            height="300"
+                            allow="autoplay; fullscreen"
+                            allowFullScreen
+                        />
                     ) : (
                         <Image
                             alt="img"
@@ -35,10 +40,16 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                 <Divider my={5} borderWidth={1} borderColor={"white"} width={50} />
                 <Text mb={5} dangerouslySetInnerHTML={{ __html: content }} />
                 {git && (
-                    <a href={git} target="_blank">Github</a>
+                    <a href={git} target="_blank">
+                        <FontAwesomeIcon
+                            icon={faGithub}
+                            size="lg"
+                            className="icon"
+                        />
+                    </a>
                 )}
             </CardBody>
-        </Card>
+        </Card >
     );
 };
 

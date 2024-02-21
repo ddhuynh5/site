@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useCallback, useState } from "react"
 import {
     Flex,
     Box
@@ -16,11 +16,11 @@ import { ComponentType } from "../_types"
 import "../_styles/style.css"
 
 const Body = () => {
-    const [component, setComponent] = React.useState<ComponentType>("home");
-    const [lastScrollTime, setLastScrollTime] = React.useState(0);
+    const [component, setComponent] = useState<ComponentType>("home");
+    const [lastScrollTime, setLastScrollTime] = useState(0);
     const scrollThreshold = 1000;
 
-    const scrollUp = () => {
+    const scrollUp = useCallback(() => {
         if (component === "home") {
             setComponent("project");
         } else if (component === "about") {
@@ -30,9 +30,9 @@ const Body = () => {
         } else if (component === "project") {
             setComponent("tech");
         }
-    };
+    }, [component]);
 
-    const scrollDown = () => {
+    const scrollDown = useCallback(() => {
         if (component === "home") {
             setComponent("about");
         } else if (component === "about") {
@@ -42,9 +42,9 @@ const Body = () => {
         } else if (component === "project") {
             setComponent("home");
         }
-    };
+    }, [component]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleWheelScroll = (event: WheelEvent) => {
             const currentTime = Date.now();
 

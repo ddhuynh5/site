@@ -26,7 +26,7 @@ const project = () => {
                 <a href='https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/' target='_blank'> \
                 <span style='text-decoration: underline; color: #63B3ED'>Husky Robot</a> to traverse thru \
                 various terrain autonomously";
-    const carVideo = "/husky_test.mp4";
+    const carVideo = "https://vimeo.com/915154874?share=copy";
     const carGit = "https://github.com/ddhuynh5/HuskyRobot";
     const carTags = [
         <Tag key="python" mt={2}>Python</Tag>,
