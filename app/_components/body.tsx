@@ -3,7 +3,6 @@
 import React from "react"
 import {
     Flex,
-    Button,
     Box
 } from "@chakra-ui/react"
 import Hero from "./hero"
@@ -11,26 +10,24 @@ import IconDivide from "./iconDivide"
 import Home from "./home"
 import Footer from "./footer"
 import About from "./about"
-import Contact from "./contact"
+import Social from "./social"
 import TechStack from "./techStack"
 import { ComponentType } from "../_types"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons"
 import "../_styles/style.css"
 
 const home = () => {
-    const [component, setComponent] = React.useState<ComponentType>("contact");
+    const [component, setComponent] = React.useState<ComponentType>("tech");
     const [lastScrollTime, setLastScrollTime] = React.useState(0);
     const scrollThreshold = 1000;
 
     const scrollUp = () => {
         if (component === "home") {
-            setComponent("contact");
+            setComponent("social");
         } else if (component === "about") {
             setComponent("home");
         } else if (component === "tech") {
             setComponent("about");
-        } else if (component === "contact") {
+        } else if (component === "social") {
             setComponent("tech");
         }
     };
@@ -41,8 +38,8 @@ const home = () => {
         } else if (component === "about") {
             setComponent("tech");
         } else if (component === "tech") {
-            setComponent("contact");
-        } else if (component === "contact") {
+            setComponent("social");
+        } else if (component === "social") {
             setComponent("home");
         }
     };
@@ -71,7 +68,7 @@ const home = () => {
                         {componentName === "home" && <Home />}
                         {componentName === "about" && <About />}
                         {componentName === "tech" && <TechStack />}
-                        {componentName === "contact" && <Contact />}
+                        {componentName === "social" && <Social />}
                     </>
                 )}
             </Box>
@@ -136,7 +133,7 @@ const home = () => {
                     {renderComponent("home", component)}
                     {renderComponent("about", component)}
                     {renderComponent("tech", component)}
-                    {renderComponent("contact", component)}
+                    {renderComponent("social", component)}
                 </Flex>
             </Flex>
             {/* <Footer /> */}

@@ -11,7 +11,7 @@
 
 .fade-in {
     opacity: 1;
-    color: yellow;
+    color: #ECC94B;
 }
 
 .fade-out {
@@ -19,8 +19,11 @@
 }
 
 .icon {
-    height: 48px;
-    width: 48px;
+    color: white;
+}
+
+.icon:hover {
+    cursor: pointer;
 }
 
 @keyframes bounce {

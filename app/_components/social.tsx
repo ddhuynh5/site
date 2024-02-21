@@ -14,7 +14,7 @@ import {
     faGithub
 } from "@fortawesome/free-brands-svg-icons"
 
-const contact = () => {
+const social = () => {
     return (
         <Box width={"31.25rem"}>
             <Box
@@ -25,7 +25,7 @@ const contact = () => {
                 id="tech"
             >
                 <Flex direction={"column"}>
-                    {<Heading>Contact</Heading>}
+                    <Heading>Socials</Heading>
                     <Divider mt={5} mb={10} borderWidth={1} borderColor={"white"} />
                     <Stack
                         mt={10}
@@ -37,7 +37,7 @@ const contact = () => {
                             justify="space-around"
                             direction={{ base: "row", md: "row" }}
                         >
-                            <a href="mailto:dennishuynh0119@gmail.com">
+                            {/* <a href="mailto:dennishuynh0119@gmail.com">
                                 <IconButton
                                     aria-label="email"
                                     variant="ghost"
@@ -50,7 +50,7 @@ const contact = () => {
                                     }}
                                     isRound
                                 />
-                            </a>
+                            </a> */}
                             <IconButton
                                 aria-label="github"
                                 variant="ghost"
@@ -86,4 +86,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default social

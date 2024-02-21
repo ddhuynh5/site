@@ -1,6 +1,5 @@
 import React from "react"
 import {
-    Box,
     Flex,
     Tag,
     Heading,
@@ -9,13 +8,15 @@ import {
 
 const techStack = () => {
     return (
-        <Box width={"31.25rem"}>
-            <Box
+        <Flex height="100%">
+            <Flex
                 borderRadius="lg"
                 p={8}
                 alignContent={"center"}
                 justifyContent={"center"}
                 id="tech"
+                direction={"row"}
+                width={"31.25rem"}
             >
                 <Flex direction={"column"}>
                     <Heading size={"lg"}>Front End</Heading>
@@ -52,8 +53,14 @@ const techStack = () => {
                         <Tag _hover={{ bg: "teal.600" }}>AWS RDS</Tag>
                     </Flex>
                 </Flex>
-            </Box>
-        </Box>
+            </Flex>
+            <Flex ml={100} mt={215}>
+                <img
+                    src="/computer.png"
+                    style={{ height: "150px", width: "150px" }}
+                />
+            </Flex>
+        </Flex>
     )
 }
 

@@ -65,7 +65,7 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
                 cursor={"pointer"}
             >
                 <IconButton
-                    aria-label="About"
+                    aria-label="Tech"
                     variant="ghost"
                     size="lg"
                     icon={<FontAwesomeIcon icon={faLayerGroup} size="lg" />}
@@ -80,11 +80,11 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
             <Divider orientation="vertical" h={20} borderWidth={1} borderColor={"white"} />
             <Box
                 m={3}
-                onClick={() => switchComponent("contact")}
+                onClick={() => switchComponent("social")}
                 cursor={"pointer"}
             >
                 <IconButton
-                    aria-label="About"
+                    aria-label="Social"
                     variant="ghost"
                     size="lg"
                     icon={<FontAwesomeIcon icon={faShareNodes} size="lg" />}
@@ -93,7 +93,7 @@ const iconDivide: React.FC<IconDivideProps> = ({ switchComponent, activeComponen
                         color: "white",
                     }}
                     isRound
-                    className={activeComponent === "contact" ? "active" : ""}
+                    className={activeComponent === "social" ? "active" : ""}
                 />
             </Box>
         </Flex>

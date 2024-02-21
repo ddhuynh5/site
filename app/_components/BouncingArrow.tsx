@@ -9,11 +9,12 @@ const BouncingArrow: React.FC = () => {
                 transform="translateX(-50%)"
                 animation="bounce 2s infinite"
                 cursor="pointer"
+                mt={5}
             >
                 <FontAwesomeIcon icon={faArrowDown} size="2x" />
             </Box>
         </Tooltip>
     );
-}; 
+};
 
 export default BouncingArrow;
