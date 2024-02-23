@@ -11,7 +11,7 @@ import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video }) => {
+const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video, gif }) => {
 
     return (
         <Card bg={"blue.700"}>
@@ -20,19 +20,31 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                     {video ? (
                         <iframe
                             src="https://player.vimeo.com/video/915154874?h=adac8b3768"
-                            width="250"
-                            height="300"
+                            width="175"
+                            height="320"
                             allow="autoplay; fullscreen"
                             allowFullScreen
                         />
                     ) : (
-                        <Image
-                            alt="img"
-                            src={image}
-                            style={{ height: "150px", width: "150px", borderRadius: "50%" }}
-                            width={150}
-                            height={150}
-                        />
+                        gif ? (
+                            <Image
+                                alt="gif"
+                                src={gif}
+                                style={{ height: "100%", width: "100%", cursor: "pointer" }}
+                                width={250}
+                                height={250}
+                                onClick={() => window.open(gif, '_blank')}
+                                title="Click to open in new tab"
+                            />
+                        ) : (
+                            <Image
+                                alt="img"
+                                src={image}
+                                style={{ height: "200px", width: "200px", borderRadius: "50%" }}
+                                width={200}
+                                height={200}
+                            />
+                        )
                     )}
                 </Flex>
                 <Text fontWeight="bold" textColor={"yellow.400"}>{title}</Text>

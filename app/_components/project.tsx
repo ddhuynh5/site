@@ -9,17 +9,6 @@ import ProjectBox from "./projectBox"
 import Carousel from "./carousel"
 
 const project = () => {
-    const truck = "This project was built with a team of 5 developers. I volunteered as team lead \
-                    and helped to facilitate development, product/project management, and communication!";
-    const truckImg = "/truck.JPG";
-    const truckGit = "https://github.com/ddhuynh5/TruckTruckGo";
-    const truckTags = [
-        <Tag key="react" mt={2}>React</Tag>,
-        <Tag key="django" mt={2} ml={2}>Django</Tag>,
-        <Tag key="mysql" mt={2} ml={2}>MySQL</Tag>,
-        <Tag key="aws-rds" mt={2} ml={2}>AWS RDS</Tag>,
-        <Tag key="aws-ec2" mt={2} ml={2}>AWS EC2</Tag>
-    ];
 
     const car = "I built and trained a neural network model that would allow a \
                 <a href='https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/' target='_blank'> \
@@ -33,9 +22,30 @@ const project = () => {
         <Tag key="jupyter-notebook" mt={2}>Jupyter Notebook</Tag>,
     ];
 
+    const truck = "This project was built with a team of 5 developers. I volunteered as team lead \
+                    and helped to facilitate development, product/project management, and communication!";
+    const truckImg = "/truck.JPG";
+    const truckGit = "https://github.com/ddhuynh5/TruckTruckGo";
+    const truckTags = [
+        <Tag key="react" mt={2}>React</Tag>,
+        <Tag key="django" mt={2} ml={2}>Django</Tag>,
+        <Tag key="mysql" mt={2} ml={2}>MySQL</Tag>,
+        <Tag key="aws-rds" mt={2} ml={2}>AWS RDS</Tag>,
+        <Tag key="aws-ec2" mt={2} ml={2}>AWS EC2</Tag>
+    ];
+
+    const bot = "A fun lil side project that turned into something kinda useful. Funny interactions, cat pics, fixes Twitter/X embeds \
+                purge messages, and more! DenBot does it all!";
+    const botGit = "https://github.com/ddhuynh5/DenBot";
+    const botTag = [
+        <Tag key="react" mt={2}>Python</Tag>,
+        <Tag key="django" mt={2} ml={2}>Discord</Tag>,
+    ];
+
     const slides = [
-        <ProjectBox key="car-project" title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={true} />,
-        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video={false} />
+        <ProjectBox key="car-project" title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={true} gif="" />,
+        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video={false} gif="" />,
+        <ProjectBox key="bot-project" title="DenBot" content={bot} image="" git={botGit} tag={botTag} video={false} gif="/bot_showcase.gif" />
     ];
 
     return (
