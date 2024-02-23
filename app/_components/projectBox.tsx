@@ -21,7 +21,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                         <iframe
                             src="https://player.vimeo.com/video/915154874?h=adac8b3768"
                             width="175"
-                            height="320"
+                            height="310"
                             allow="autoplay; fullscreen"
                             allowFullScreen
                         />
@@ -33,8 +33,9 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                                 style={{ height: "100%", width: "100%", cursor: "pointer" }}
                                 width={250}
                                 height={250}
-                                onClick={() => window.open(gif, '_blank')}
+                                onClick={() => window.open(gif, "_blank")}
                                 title="Click to open in new tab"
+                                loading="lazy"
                             />
                         ) : (
                             <Image
@@ -43,6 +44,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                                 style={{ height: "200px", width: "200px", borderRadius: "50%" }}
                                 width={200}
                                 height={200}
+                                loading="lazy"
                             />
                         )
                     )}

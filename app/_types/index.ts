@@ -19,6 +19,6 @@ export type ProjectBoxProps = {
     gif: string;
 }
 
-export type CarouselProps = {
+export type GalleryProps = {
     slides: JSX.Element[];
 }

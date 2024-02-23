@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Flex, IconButton } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { CarouselProps } from "../_types";
+import { GalleryProps } from "../_types";
 
-const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+const Gallery: React.FC<GalleryProps> = ({ slides }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPrevSlide = () => {
@@ -26,16 +26,18 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
             />
             <Flex width="400px" height="300px" position="relative">
                 {slides.map((slide, index) => (
-                    <Flex
-                        key={index}
-                        opacity={index === currentIndex ? 1 : 0}
-                        position="absolute"
-                        top={0}
-                        left={0}
-                        transition="opacity 0.5s ease-in-out"
-                    >
-                        {slide}
-                    </Flex>
+                    index === currentIndex ?
+                        <Flex
+                            key={index}
+                            opacity={index === currentIndex ? 1 : 0}
+                            position="absolute"
+                            top={0}
+                            left={0}
+                            transition="opacity 0.5s ease-in-out"
+                        >
+                            {slide}
+                        </Flex>
+                        : null
                 ))}
             </Flex>
             <IconButton
@@ -49,4 +51,4 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
     );
 };
 
-export default Carousel;
+export default Gallery;

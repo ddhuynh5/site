@@ -6,7 +6,7 @@ import {
     Tag
 } from "@chakra-ui/react"
 import ProjectBox from "./projectBox"
-import Carousel from "./carousel"
+import Gallery from "./gallery"
 
 const project = () => {
 
@@ -43,9 +43,9 @@ const project = () => {
     ];
 
     const slides = [
+        <ProjectBox key="bot-project" title="DenBot" content={bot} image="" git={botGit} tag={botTag} video={false} gif="/bot_showcase.gif" />,
         <ProjectBox key="car-project" title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={true} gif="" />,
-        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video={false} gif="" />,
-        <ProjectBox key="bot-project" title="DenBot" content={bot} image="" git={botGit} tag={botTag} video={false} gif="/bot_showcase.gif" />
+        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video={false} gif="" />
     ];
 
     return (
@@ -61,7 +61,7 @@ const project = () => {
                 <Flex direction={"column"}>
                     <Heading>Projects</Heading>
                     <Divider mt={5} mb={10} borderWidth={1} borderColor={"white"} />
-                    <Carousel slides={slides} />
+                    <Gallery slides={slides} />
                 </Flex>
             </Flex>
         </Flex>
