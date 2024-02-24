@@ -1,17 +1,18 @@
-import React from "react"
+import React from "react";
 import {
     Flex,
     Divider,
     Card,
     CardBody,
     Text
-} from "@chakra-ui/react"
-import { ProjectBoxProps } from "../_types"
-import Image from "next/image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
+} from "@chakra-ui/react";
+import { ProjectBoxProps } from "../_types";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import WidgetBotCrate from "./widgetbotcrate";
 
-const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video, gif }) => {
+const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video, gif, HWS, info }) => {
 
     return (
         <Card bg={"blue.700"}>
@@ -53,15 +54,24 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                 {...tag}
                 <Divider my={5} borderWidth={1} borderColor={"white"} width={50} />
                 <Text mb={5} dangerouslySetInnerHTML={{ __html: content }} />
-                {git && (
-                    <a href={git} target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon
-                            icon={faGithub}
-                            size="lg"
-                            className="icon"
-                        />
-                    </a>
+                {info != "" && (
+                    <Text my={5}>{info}</Text>
                 )}
+                <Flex direction={"row"}>
+                    {git && (
+                        <a href={git} target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon
+                                icon={faGithub}
+                                size="lg"
+                                className="icon"
+                                title={git}
+                            />
+                        </a>
+                    )}
+                    {title === "DenBot" && (
+                        <WidgetBotCrate handleWheelScroll={HWS} />
+                    )}
+                </Flex>
             </CardBody>
         </Card >
     );

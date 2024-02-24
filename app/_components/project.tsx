@@ -1,14 +1,15 @@
-import React from "react"
+import React from "react";
 import {
     Flex,
     Heading,
     Divider,
     Tag
-} from "@chakra-ui/react"
-import ProjectBox from "./projectBox"
-import Gallery from "./gallery"
+} from "@chakra-ui/react";
+import ProjectBox from "./projectBox";
+import Gallery from "./gallery";
+import { HWSProps } from "../_types";
 
-const project = () => {
+const project: React.FC<HWSProps> = ({ handleWheelScroll }) => {
 
     const car = "I built and trained a neural network model that would allow a \
                 <a href='https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/' target='_blank'> \
@@ -22,8 +23,9 @@ const project = () => {
         <Tag key="jupyter-notebook" mt={2}>Jupyter Notebook</Tag>,
     ];
 
-    const truck = "This project was built with a team of 5 developers. I volunteered as team lead \
-                    and helped to facilitate development, product/project management, and communication!";
+    const truck = "Web app serving to incentivise safer driving through a point-based reward system";
+    const truckInfo = "This project was built with a team of 5 developers. I volunteered as team lead \
+    and helped to facilitate development, product/project management, and communication!";
     const truckImg = "/truck.JPG";
     const truckGit = "https://github.com/ddhuynh5/TruckTruckGo";
     const truckTags = [
@@ -36,6 +38,7 @@ const project = () => {
 
     const bot = "A fun lil side project that turned into something kinda useful. Funny interactions, cat pics, fixes Twitter/X embeds \
                 purge messages, and more! DenBot does it all!";
+    const botInfo = "Click the Discord icon to interact with my bot!";
     const botGit = "https://github.com/ddhuynh5/DenBot";
     const botTag = [
         <Tag key="react" mt={2}>Python</Tag>,
@@ -43,9 +46,42 @@ const project = () => {
     ];
 
     const slides = [
-        <ProjectBox key="bot-project" title="DenBot" content={bot} image="" git={botGit} tag={botTag} video={false} gif="/bot_showcase.gif" />,
-        <ProjectBox key="car-project" title="Autonomous Vehicle Training" content={car} image="" git={carGit} tag={carTags} video={true} gif="" />,
-        <ProjectBox key="truck-project" title="TruckTruckGo" content={truck} image={truckImg} git={truckGit} tag={truckTags} video={false} gif="" />
+        <ProjectBox
+            key="bot-project"
+            title="DenBot"
+            content={bot}
+            image=""
+            git={botGit}
+            tag={botTag}
+            video={false}
+            gif="/bot_showcase.gif"
+            HWS={handleWheelScroll}
+            info={botInfo}
+        />,
+        <ProjectBox
+            key="car-project"
+            title="Autonomous Vehicle Training"
+            content={car}
+            image=""
+            git={carGit}
+            tag={carTags}
+            video={true}
+            gif=""
+            HWS={handleWheelScroll}
+            info=""
+        />,
+        <ProjectBox
+            key="truck-project"
+            title="TruckTruckGo"
+            content={truck}
+            image={truckImg}
+            git={truckGit}
+            tag={truckTags}
+            video={false}
+            gif=""
+            HWS={handleWheelScroll}
+            info={truckInfo}
+        />
     ];
 
     return (

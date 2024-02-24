@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import React, { useEffect, useCallback, useState } from "react"
+import React, { useEffect, useCallback, useState } from "react";
 import {
     Flex,
     Box
-} from "@chakra-ui/react"
-import Hero from "./hero"
-import IconDivide from "./iconDivide"
-import Home from "./home"
-import Footer from "./footer"
-import About from "./about"
-import Project from "./project"
-import TechStack from "./techStack"
-import { ComponentType } from "../_types"
-import "../_styles/style.css"
+} from "@chakra-ui/react";
+import Hero from "./hero";
+import IconDivide from "./iconDivide";
+import Home from "./home";
+import Footer from "./footer";
+import About from "./about";
+import Project from "./project";
+import TechStack from "./techStack";
+import { ComponentType } from "../_types";
+import "../_styles/style.css";
 
 const Body = () => {
     const [component, setComponent] = useState<ComponentType>("home");
@@ -44,26 +44,26 @@ const Body = () => {
         }
     }, [component]);
 
-    useEffect(() => {
-        const handleWheelScroll = (event: WheelEvent) => {
-            const currentTime = Date.now();
+    const handleWheelScroll = useCallback((event: WheelEvent) => {
+        const currentTime = Date.now();
 
-            if (currentTime - lastScrollTime > scrollThreshold) {
-                setLastScrollTime(currentTime);
-                if (event.deltaY < 0) {
-                    scrollUp();
-                } else {
-                    scrollDown();
-                }
+        if (currentTime - lastScrollTime > scrollThreshold) {
+            setLastScrollTime(currentTime);
+            if (event.deltaY < 0) {
+                scrollUp();
+            } else {
+                scrollDown();
             }
-        };
+        }
+    }, [lastScrollTime, scrollThreshold, scrollUp, scrollDown]);
 
+    useEffect(() => {
         window.addEventListener("wheel", handleWheelScroll);
 
         return () => {
             window.removeEventListener("wheel", handleWheelScroll);
         };
-    }, [component, lastScrollTime, scrollThreshold, scrollUp, scrollDown]);
+    }, [component, lastScrollTime, scrollThreshold, scrollUp, scrollDown, handleWheelScroll]);
 
     const renderComponent = (componentName: ComponentType, activeComponent: ComponentType) => {
         const isActive = componentName === activeComponent;
@@ -76,7 +76,7 @@ const Body = () => {
                         {componentName === "home" && <Home />}
                         {componentName === "about" && <About />}
                         {componentName === "tech" && <TechStack />}
-                        {componentName === "project" && <Project />}
+                        {componentName === "project" && <Project handleWheelScroll={handleWheelScroll} />}
                     </>
                 )}
             </Box>
