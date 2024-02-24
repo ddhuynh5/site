@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import WidgetBotCrate from "./widgetbotcrate";
 
-const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video, gif, HWS, info }) => {
+const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video, gif, handleWheelScroll, info }) => {
 
     return (
         <Card bg={"blue.700"}>
@@ -69,7 +69,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                         </a>
                     )}
                     {title === "DenBot" && (
-                        <WidgetBotCrate handleWheelScroll={HWS} />
+                        <WidgetBotCrate handleWheelScroll={handleWheelScroll} />
                     )}
                 </Flex>
             </CardBody>

@@ -7,9 +7,9 @@ import {
 } from "@chakra-ui/react";
 import ProjectBox from "./projectBox";
 import Gallery from "./gallery";
-import { HWSProps } from "../_types";
+import { handleWheelScrollProps } from "../_types";
 
-const project: React.FC<HWSProps> = ({ handleWheelScroll }) => {
+const project: React.FC<handleWheelScrollProps> = ({ handleWheelScroll }) => {
 
     const car = "I built and trained a neural network model that would allow a \
                 <a href='https://clearpathrobotics.com/husky-unmanned-ground-vehicle-robot/' target='_blank'> \
@@ -55,7 +55,7 @@ const project: React.FC<HWSProps> = ({ handleWheelScroll }) => {
             tag={botTag}
             video={false}
             gif="/bot_showcase.gif"
-            HWS={handleWheelScroll}
+            handleWheelScroll={handleWheelScroll}
             info={botInfo}
         />,
         <ProjectBox
@@ -67,7 +67,7 @@ const project: React.FC<HWSProps> = ({ handleWheelScroll }) => {
             tag={carTags}
             video={true}
             gif=""
-            HWS={handleWheelScroll}
+            handleWheelScroll={handleWheelScroll}
             info=""
         />,
         <ProjectBox
@@ -79,7 +79,7 @@ const project: React.FC<HWSProps> = ({ handleWheelScroll }) => {
             tag={truckTags}
             video={false}
             gif=""
-            HWS={handleWheelScroll}
+            handleWheelScroll={handleWheelScroll}
             info={truckInfo}
         />
     ];
@@ -97,7 +97,7 @@ const project: React.FC<HWSProps> = ({ handleWheelScroll }) => {
                 <Flex direction={"column"}>
                     <Heading>Projects</Heading>
                     <Divider mt={5} mb={10} borderWidth={1} borderColor={"white"} />
-                    <Gallery slides={slides} />
+                    <Gallery slides={slides} handleWheelScroll={handleWheelScroll} />
                 </Flex>
             </Flex>
         </Flex>

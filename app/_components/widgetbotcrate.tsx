@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import WidgetBot from "@widgetbot/react-embed";
-import { HWSProps } from "../_types";
+import { handleWheelScrollProps } from "../_types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
-const WidgetBotCrate: React.FC<HWSProps> = ({ handleWheelScroll }) => {
+const WidgetBotCrate: React.FC<handleWheelScrollProps> = ({ handleWheelScroll }) => {
     const [isWidgetOpen, setIsWidgetOpen] = useState(false);
     const widgetRef = useRef<HTMLDivElement>(null);
 

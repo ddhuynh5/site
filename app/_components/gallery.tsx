@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { GalleryProps } from "../_types";
 
-const Gallery: React.FC<GalleryProps> = ({ slides }) => {
+const Gallery: React.FC<GalleryProps> = ({ slides, handleWheelScroll }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPrevSlide = () => {

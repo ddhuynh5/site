@@ -17,14 +17,15 @@ export type ProjectBoxProps = {
     tag: JSX.Element[];
     video: boolean;
     gif: string;
-    HWS: (event: WheelEvent) => void;
+    handleWheelScroll: (event: WheelEvent) => void;
     info: string;
 }
 
 export type GalleryProps = {
     slides: JSX.Element[];
+    handleWheelScroll: (event: WheelEvent) => void;
 }
 
-export type HWSProps = {
+export type handleWheelScrollProps = {
     handleWheelScroll: (event: WheelEvent) => void;
 }
