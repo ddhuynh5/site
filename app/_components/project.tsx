@@ -28,6 +28,7 @@ const project: React.FC<handleWheelScrollProps> = ({ handleWheelScroll }) => {
     and helped to facilitate development, product/project management, and communication!";
     const truckImg = "/truck.JPG";
     const truckGit = "https://github.com/ddhuynh5/TruckTruckGo";
+    const truckLink = "https://truck-truck-go.vercel.app/";
     const truckTags = [
         <Tag key="react" mt={2}>React</Tag>,
         <Tag key="django" mt={2} ml={2}>Django</Tag>,
@@ -57,6 +58,7 @@ const project: React.FC<handleWheelScrollProps> = ({ handleWheelScroll }) => {
             gif="/bot_showcase.gif"
             handleWheelScroll={handleWheelScroll}
             info={botInfo}
+            link=""
         />,
         <ProjectBox
             key="car-project"
@@ -69,6 +71,7 @@ const project: React.FC<handleWheelScrollProps> = ({ handleWheelScroll }) => {
             gif=""
             handleWheelScroll={handleWheelScroll}
             info=""
+            link=""
         />,
         <ProjectBox
             key="truck-project"
@@ -81,6 +84,7 @@ const project: React.FC<handleWheelScrollProps> = ({ handleWheelScroll }) => {
             gif=""
             handleWheelScroll={handleWheelScroll}
             info={truckInfo}
+            link={truckLink}
         />
     ];
 

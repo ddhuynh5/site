@@ -10,19 +10,20 @@ const WidgetBotCrate: React.FC<handleWheelScrollProps> = ({ handleWheelScroll })
 
     const toggleWidget = useCallback(() => {
         setIsWidgetOpen(isWidgetOpen => !isWidgetOpen);
+        return Promise.resolve();
     }, [setIsWidgetOpen]);
 
-    const handleClickOutside = useCallback((event: MouseEvent) => {
+    const handleClickOutside = useCallback(async (event: MouseEvent) => {
         if (
             widgetRef.current &&
             event.target instanceof Node &&
             !widgetRef.current.contains(event.target as Node)
         ) {
-            toggleWidget();
+            await toggleWidget();
         }
     }, [toggleWidget]);
 
-    useEffect(() => {
+    /* useEffect(() => {
 
         if (isWidgetOpen == true) {
             document.removeEventListener("wheel", handleWheelScroll);
@@ -39,7 +40,25 @@ const WidgetBotCrate: React.FC<handleWheelScrollProps> = ({ handleWheelScroll })
             document.removeEventListener("wheel", handleWheelScroll);
             window.removeEventListener("wheel", handleWheelScroll);
         };
-    }, [isWidgetOpen, handleWheelScroll, handleClickOutside]);
+    }, [isWidgetOpen, handleWheelScroll, handleClickOutside]); */
+
+    const handleClick = async () => {
+        // Wait for toggleWidget to finish
+        await toggleWidget();
+
+        // After toggleWidget is finished, execute handleClick logic
+        if (isWidgetOpen) {
+            console.log("OPEN");
+            document.removeEventListener("wheel", handleWheelScroll);
+            window.removeEventListener("wheel", handleWheelScroll);
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            console.log("FALSE");
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.addEventListener("wheel", handleWheelScroll);
+            window.addEventListener("wheel", handleWheelScroll);
+        }
+    };
 
     return (
         <div ref={widgetRef}>
@@ -47,7 +66,12 @@ const WidgetBotCrate: React.FC<handleWheelScrollProps> = ({ handleWheelScroll })
                 icon={faDiscord}
                 size="lg"
                 className="icon"
-                onClick={toggleWidget}
+                // onClick={toggleWidget}
+                onClick={() => {
+                    toggleWidget().then(() => {
+                        handleClick();
+                    });
+                }}
                 style={{ marginLeft: "10" }}
                 title="Interact with my bot!"
             />

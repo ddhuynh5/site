@@ -19,6 +19,7 @@ export type ProjectBoxProps = {
     gif: string;
     handleWheelScroll: (event: WheelEvent) => void;
     info: string;
+    link: string;
 }
 
 export type GalleryProps = {

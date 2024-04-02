@@ -10,9 +10,10 @@ import { ProjectBoxProps } from "../_types";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import WidgetBotCrate from "./widgetbotcrate";
 
-const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video, gif, handleWheelScroll, info }) => {
+const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag, video, gif, handleWheelScroll, info, link }) => {
 
     return (
         <Card bg={"blue.700"}>
@@ -70,6 +71,16 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, image, git, tag
                     )}
                     {title === "DenBot" && (
                         <WidgetBotCrate handleWheelScroll={handleWheelScroll} />
+                    )}
+                    {link && (
+                        <a href={link} target="_blank" rel="noopener noreferrer" style={{ marginLeft: "10px" }}>
+                            <FontAwesomeIcon
+                                icon={faArrowUpRightFromSquare}
+                                size="lg"
+                                className="icon"
+                                title={link}
+                            />
+                        </a>
                     )}
                 </Flex>
             </CardBody>
